@@ -3,7 +3,7 @@
         <form [formGroup]="signInFormGroup" (ngSubmit)="signInFormGroup.valid&&signInSubmit()">
             <div class="form w-50 m-auto">
                 <input [class.is-valid]="signInFormGroup.get('email').status=='VALID'" formControlName="email"
-                    type="email" placeholder="Enter Email" class="form-control mt-3" maxlength="20">
+                    type="email" placeholder="Enter Email" class="form-control mt-3" maxlength="40">
                 <h6 *ngIf="signInFormGroup.get('email').errors&&signInFormGroup.get('email').touched"
                     class="alert alert-danger py-0" role="alert">
                     Email is required
